@@ -14,3 +14,12 @@ func printHello(_ name: String) -> String{
 }
 print(printHello("Misha"))
 
+//MARK: - 2
+func sumOfSymbols( first: String, second: String) -> Int {
+    var sum = first.count + second.count
+    return sum
+}
+let first = "hello"
+let second = "Misha"
+print(sumOfSymbols(first: first, second: second))
+
