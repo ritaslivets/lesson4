@@ -31,3 +31,11 @@ func squareOfNumber(_ number: Int)->Int{
 let number = 13
 print(squareOfNumber(number))
 
+//MARK: - 4
+func areaOfCircle(radius: Double)->Double{
+    let Pi = 3.14
+    let area = Pi*radius*radius
+    return area
+}
+let radius: Double = 12.5
+print(areaOfCircle(radius: radius))
