@@ -76,3 +76,16 @@ func timeOfYear(month: Int) -> String {
     return period
 }
 print(timeOfYear(month: 8))
+
+//MARK: - 7
+func phoneNumber( number: String ){
+    let kodeofCountry = String(number.prefix(3))
+    print(" код страны: \(kodeofCountry)")
+    let afterremain = String(number.dropFirst(3))
+    let kodeOfOperator = String(afterremain.prefix(2))
+    print(" код оператора: \(kodeOfOperator)")
+    let phnumber = String(afterremain.dropFirst(2))
+    print(" номер : \(phnumber)")
+}
+phoneNumber(number: "375291061912")
+
