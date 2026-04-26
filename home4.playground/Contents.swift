@@ -39,3 +39,15 @@ func areaOfCircle(radius: Double)->Double{
 }
 let radius: Double = 12.5
 print(areaOfCircle(radius: radius))
+
+//MARK: - 5
+func dayOrNight(time: Int){
+    if time < 0 || time > 24 {
+        print("неккоректно введенно время!")
+    } else if time >= 6 && time < 22{
+        print("Сейчас день!")
+    } else {
+        print("Сейчас ночь!")
+    }
+}
+dayOrNight(time: 1)
