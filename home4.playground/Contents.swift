@@ -42,12 +42,50 @@ print(areaOfCircle(radius: radius))
 
 //MARK: - 5
 func dayOrNight(time: Int){
-    if time < 0 || time > 24 {
-        print("неккоректно введенно время!")
-    } else if time >= 6 && time < 22{
+    if time >= 6 && time < 22{
         print("Сейчас день!")
-    } else {
+    } else if time <= 22 && time >= 0 || time == 24 {
         print("Сейчас ночь!")
+    } else {
+        print("неккоректно введенно время!")
     }
+    //if time < 0 || time > 24 {
+       // print("неккоректно введенно время!")
+    //} else if time >= 6 && time < 22{
+    //    print("Сейчас день!")
+   // } else {
+      //  print("Сейчас ночь!")
+   // }
 }
-dayOrNight(time: 1)
+dayOrNight(time: 6)
+
+//MARK: - 6
+func timeOfYear(month: Int) -> String {
+    let period: String
+    if month >= 1 && month <= 2 || month == 12 {
+        period = " winter"
+    } else if month >= 3 && month <= 5 {
+        period = " spring "
+    } else if  month >= 6 && month <= 8 {
+        period = " summer"
+    } else if month >= 9 && month <= 11 {
+        period = " fall "
+    } else {
+        period = " неккоректно введенно время!"
+    }
+    return period
+}
+print(timeOfYear(month: 8))
+
+//MARK: - 7
+func phoneNumber( number: String ){
+    let kodeofCountry = String(number.prefix(3))
+    print(" код страны: \(kodeofCountry)")
+    let afterremain = String(number.dropFirst(3))
+    let kodeOfOperator = String(afterremain.prefix(2))
+    print(" код оператора: \(kodeOfOperator)")
+    let phnumber = String(afterremain.dropFirst(2))
+    print(" номер : \(phnumber)")
+}
+phoneNumber(number: "375291061912")
+
