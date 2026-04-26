@@ -23,3 +23,11 @@ let first = "hello"
 let second = "Misha"
 print(sumOfSymbols(first: first, second: second))
 
+//MARK: - 3
+func squareOfNumber(_ number: Int)->Int{
+    let square = number*number
+    return square
+}
+let number = 13
+print(squareOfNumber(number))
+
