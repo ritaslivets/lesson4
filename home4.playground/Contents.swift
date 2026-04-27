@@ -139,3 +139,14 @@ func printFib(index: Int){
     }
 }
 printFib(index: 6)
+
+//MARK: - 11
+func countSum(number: Int) -> Int {
+    if number < 1000 || number > 9999 {
+        print ("Введите 4-х значное число!")
+        return 0
+    }
+    let sum = number/1000 + ((number/100) % 10) + ((number/10) % 10) + number % 10
+    return sum
+}
+print(countSum(number: 1234))
