@@ -119,3 +119,23 @@ func countFactorial( number: Int) -> Int {
       return number * countFactorial(number: number-1)
 }
 print(countFactorial(number:5))
+
+//MARK: - 10
+func printFib(index: Int){
+    if index <= 0 {
+        return
+    }
+   
+        func fib( n: Int)-> Int{
+            if n == 0 {
+                return 0
+            }else if n == 1 {
+                return 1
+            }
+            return fib(n:n - 1 ) + fib(n:n - 2 )
+        }
+    for i in 0...index {
+        print ( fib(n: i), terminator: i == index ? "\n" : ",")
+    }
+}
+printFib(index: 6)
