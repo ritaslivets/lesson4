@@ -107,3 +107,15 @@ func isSimple(number: Int)-> Bool{
     return divisor(div:2)
 }
 print(isSimple(number: 1))
+
+//MARK: - 9
+func countFactorial( number: Int) -> Int {
+    if number < 0 {
+        return 0
+    }
+    if number == 1 {
+        return 1
+    }
+      return number * countFactorial(number: number-1)
+}
+print(countFactorial(number:5))
