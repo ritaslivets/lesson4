@@ -89,3 +89,21 @@ func phoneNumber( number: String ){
 }
 phoneNumber(number: "375291061912")
 
+//MARK: - 8
+func isSimple(number: Int)-> Bool{
+    func divisor(div: Int) -> Bool {
+        if div * div > number{
+            return true
+        } else if number % div == 0{
+            return false
+        }
+        return divisor( div:div + 1)
+    }
+    if number <= 0 || number >= 100{
+        return false
+    } else if number <= 2{
+        return false 
+    }
+    return divisor(div:2)
+}
+print(isSimple(number: 1))
