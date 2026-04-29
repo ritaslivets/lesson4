@@ -1,20 +1,24 @@
 //MARK: - 1
+// TODO: - Нужен пробел перед фигурнйо скобкой
 func greeting(){
     print("Hello, World!")
 }
 greeting()
 
+// TODO: - Нужен пробел перед фигурнйо скобкой
 func printHi(_ name: String){
     print(" hi, \(name)")
 }
 printHi("Misha!")
 
+// TODO: - Нужен пробел перед фигурнйо скобкой
 func printHello(_ name: String) -> String{
     "Helo, \(name)!"
 }
 print(printHello("Misha"))
 
 //MARK: - 2
+// TODO: - НЕ Нужен пробел после обычной скобки
 func sumOfSymbols( first: String, second: String) -> Int {
     var sum = first.count + second.count
     return sum
@@ -24,7 +28,9 @@ let second = "Misha"
 print(sumOfSymbols(first: first, second: second))
 
 //MARK: - 3
+// TODO: - Пробелы между -> и перед фигурной скобкой
 func squareOfNumber(_ number: Int)->Int{
+    // TODO: - Пробелы между арифмитескими знаками
     let square = number*number
     return square
 }
@@ -32,7 +38,9 @@ let number = 13
 print(squareOfNumber(number))
 
 //MARK: - 4
+// TODO: - Пробелы. И навзщние фцнкции должно содержать глагол.
 func areaOfCircle(radius: Double)->Double{
+    // TODO: - Навзания пермеенных всегда с маленькой буквы
     let Pi = 3.14
     let area = Pi*radius*radius
     return area
@@ -41,6 +49,7 @@ let radius: Double = 12.5
 print(areaOfCircle(radius: radius))
 
 //MARK: - 5
+// TODO: - Пробел и глагол. Если ввести число 23 то выведет некорректно условие. Ну и по хорошему немного бы поменять условие в else if. Он овключает и промежутки из первого условия. По хорошему должны быть конкртено только те, которые отвечают за ночь.
 func dayOrNight(time: Int){
     if time >= 6 && time < 22{
         print("Сейчас день!")
@@ -60,6 +69,10 @@ func dayOrNight(time: Int){
 dayOrNight(time: 6)
 
 //MARK: - 6
+/* TODO: - Глагол. 
+    Не ошибка, но можно делать без переменной period. А сразу использовать return внутри блоков if else if
+    Попробуй решить еще задачу с помощью switch case.
+*/
 func timeOfYear(month: Int) -> String {
     let period: String
     if month >= 1 && month <= 2 || month == 12 {
@@ -77,19 +90,25 @@ func timeOfYear(month: Int) -> String {
 }
 print(timeOfYear(month: 8))
 
+ // TODO: - Нейминг переменных
 //MARK: - 7
 func phoneNumber( number: String ){
+    // TODO: - let codeOfCountry или даже лучше let countryCode
     let kodeofCountry = String(number.prefix(3))
     print(" код страны: \(kodeofCountry)")
+     // TODO: - let phoneWithoutCode
     let afterremain = String(number.dropFirst(3))
+    // TODO: - let operatorCode
     let kodeOfOperator = String(afterremain.prefix(2))
     print(" код оператора: \(kodeOfOperator)")
+     // TODO: - let phoneNumber
     let phnumber = String(afterremain.dropFirst(2))
     print(" номер : \(phnumber)")
 }
 phoneNumber(number: "375291061912")
 
 //MARK: - 8
+// MARK: - Интересное решение)))
 func isSimple(number: Int)-> Bool{
     func divisor(div: Int) -> Bool {
         if div * div > number{
@@ -121,20 +140,24 @@ func countFactorial( number: Int) -> Int {
 print(countFactorial(number:5))
 
 //MARK: - 10
+// TODO: - пробел
 func printFib(index: Int){
     if index <= 0 {
         return
     }
-   
+    // TODO: - отступы поехали. Надо подвинуть левее всю функцию
+    // TODO: - пробелы
         func fib( n: Int)-> Int{
             if n == 0 {
                 return 0
+            // TODO: - пробел
             }else if n == 1 {
                 return 1
             }
             return fib(n:n - 1 ) + fib(n:n - 2 )
         }
     for i in 0...index {
+        // TODO: - пробел
         print ( fib(n: i), terminator: i == index ? "\n" : ",")
     }
 }
@@ -146,6 +169,7 @@ func countSum(number: Int) -> Int {
         print ("Введите 4-х значное число!")
         return 0
     }
+    // TODO: - пробелы между математическими знаками
     let sum = number/1000 + ((number/100) % 10) + ((number/10) % 10) + number % 10
     return sum
 }
